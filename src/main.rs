@@ -37,7 +37,8 @@ fn main() {
     }
 
     for el in v {
-        println!("Name:         {}", el["name"]);
+        println!("--{:-<78}", el["name"]);
+        println!("Type:         {}", el["type_line"]);
         println!("Mana Cost:    {}", el["mana_cost"]);
         println!("Text:         {}", el["oracle_text"]);
         if !el["power"].is_null() {
