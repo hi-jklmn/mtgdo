@@ -15,9 +15,10 @@ fn main() {
     let mut cards = parse_args(env::args().collect())
         .expect("Usage: ./mtgdo cardname1 [cardname2] ...");
 
-    let all_card_infos = json::parse(&fs::read_to_string("./scryfall/cards.json")
+    let all_card_infos = 
+        json::parse(&fs::read_to_string("./scryfall/simplified.json")
         .expect(
-            "Error reading cards.json, did you run \
+            "Error reading simplified.json, did you run \
             ./scryfall/fetch_all_english_cards.sh?",
         ))
         .expect("Error parsing cards.json");

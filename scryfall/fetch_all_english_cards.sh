@@ -1,6 +1,9 @@
 #!/bin/bash
 
-DEPS=(curl jq foo)
+# cd into script directory
+cd "$(dirname "$0")"
+
+DEPS=(curl jq)
 
 # Dependency check
 if ! ./depscheck.sh ${DEPS[@]}; then
